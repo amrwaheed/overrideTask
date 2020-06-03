@@ -1,0 +1,52 @@
+<div class="container login-container">
+    <div class="row mx-auto">
+        <!-- <div class="col-md-6 login-form-1">
+            <h3>Login for Form 1</h3>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    <a href="#" class="ForgetPwd">Forget Password?</a>
+                </div>
+            </form>
+        </div> -->
+        <div class="col-sm-6 offset-sm-3  col-md-6   login-form-1">
+            <h3>Login From</h3>
+            <form [formGroup]="form" (submit)="onSubmit()" >
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Email *"  formControlName="email"
+                    [ngClass]="{'border-danger': email.touched && email.invalid,'border-success': email.valid}"  >
+                    <small class="form-text  text-danger"  *ngIf=" email.touched && email.errors?.required">
+                        must be required
+                    </small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password *" formControlName="password"
+                    [ngClass]="{'border-danger': password.touched && password.invalid,'border-success': password.valid}" >
+
+                    <small class="form-text  text-danger"  *ngIf=" password.touched && password.errors?.required">
+                        must be required
+                    </small>
+                    <small class="form-text   text-danger" *ngIf="password.errors?.minlength">
+                        must be rang {{password.errors?.minlength.requiredLength }}
+                    </small>
+                </div>
+                <div class="form-group">
+                    <!-- <input type="submit" class="btnSubmit w-100" /> -->
+                    <button type="submit" class="btnSubmit w-100">login</button> 
+                </div>
+                <div class="form-group">
+
+                    <!-- <a href="#" class="ForgetPwd" >Forget Password?</a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

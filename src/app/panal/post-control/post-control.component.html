@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 mt-5 ">
+            <form role="form" [formGroup]="form" (submit)="onSubmitPost()">
+                <div class="form-group float-label-control">
+                    <label for="">Tilte</label>
+                    <input type="text" class="form-control" formControlName="title" placeholder="post title"
+                    [ngClass]="{'border-danger': title.touched && title.invalid,'border-success': title.valid}">
+                    <small class="form-text  text-danger"  *ngIf=" title.touched && title.errors?.required">
+                        must be required
+                    </small>
+                    <small class="form-text   text-danger" *ngIf="title.errors?.minlength">
+                        must be rang {{title.errors?.minlength.requiredLength }}
+                    </small>
+                </div>
+                <div class="form-group float-label-control">
+                    <label for="">Body</label>
+                    <textarea  class="form-control" formControlName="body" placeholder="post body" rows="6"
+                    [ngClass]="{'border-danger': body.touched && body.invalid,'border-success': body.valid}"></textarea>
+                    <small class="form-text    text-danger"  *ngIf=" body.touched && body.errors?.required">
+                        must be required
+                    </small>
+                    <small class="form-text   text-danger" *ngIf="body.errors?.minlength">
+                        must be rang {{body.errors?.minlength.requiredLength }}
+                    </small>
+                </div>
+                <div class="form-group float-label-control">
+                <button type="submit" class="btn btn-info w-100  rounded-pill">{{mode == 'create'? 'Save' : 'Update'}}</button> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

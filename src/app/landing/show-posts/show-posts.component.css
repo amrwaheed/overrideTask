@@ -1,0 +1,76 @@
+
+
+
+.blog-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(8, 29, 112, 0.6);
+    font-family: "adelle-sans", sans-serif;
+    font-weight: 100;
+    margin: 22px auto;
+    width: 20rem;
+}
+@media screen and (min-width: 480px) {
+    .blog-container {
+        width: 28rem;
+    }
+}
+@media screen and (min-width: 767px) {
+    .blog-container {
+        width: 40rem;
+    }
+}
+@media screen and (min-width: 959px) {
+    .blog-container {
+        width: 50rem;
+    }
+}
+.blog-container a {
+    color: #4d4dff;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+.blog-container a:hover {
+    border-color: #ff4d4d;
+    color: hsl(0, 100%, 65%);
+}
+
+.blog-author--no-cover {
+    margin: 0 auto;
+    padding-top: 0.125rem;
+    width: 80%;
+}
+.blog-author--no-cover h3::before {
+    background: url("https://pbs.twimg.com/profile_images/1170740243466768385/jBHv12rJ_400x400.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+    height: 32px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 8px;
+    width: 32px;
+}
+
+.blog-author--no-cover h3 {
+    color: #999;
+    font-weight: 100;
+}
+.blog-body {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.blog-title h1 span {
+    color: #333;
+    font-weight: 100;
+}
+
+.blog-title h1 span:hover {
+    color: #007bff;
+    font-weight: 100;
+}
+.blog-summary p {
+    color: #4d4d4d;
+}

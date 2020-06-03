@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 mt-4 mx-auto" *ngFor="let comment of comments | slice:0:50 ; let i=index;">
+            <div class="card ">
+                <div class="card-header">
+                    Name: {{comment.name}}  {{comment.id}}
+                </div>
+                <div class="card-body  ">
+                    <h5 class="card-title mb-4">{{comment.email}}</h5>
+                    <p class="card-text">{{comment.body}}</p>
+                    <a [routerLink]="['/panal','comments','control',comment.id,'edit']"
+                        class="btn btn-outline-primary mr-3 w-100 rounded-pill mb-2">Edit</a>
+                    <button (click)="onDelete(comment.id, i)" class="btn btn-danger w-100 rounded-pill ">Delete</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

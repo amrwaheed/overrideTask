@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-f1cef": {
+      "hosting": {
+        "override": [
+          "login-f1cef"
+        ]
+      }
+    }
+  }
+}

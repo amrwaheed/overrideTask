@@ -1,0 +1,11 @@
+.card{
+    box-shadow: 2px 2px 8px rgba(8, 29, 112, 0.6);
+    border-radius: 20px;
+  
+  
+}
+.card-header {
+    background-color: rgba(0,0,0,0);
+    color: #007bff;
+    text-shadow: 3px 2px 9px;
+}
