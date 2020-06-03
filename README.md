@@ -10,3 +10,5 @@
 ### 3- open terminal for running the angular project via command `ng serve --o`
 
 ### 4- create account to login the panal module
+
+### I used angular with firebase to login
